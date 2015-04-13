@@ -16,17 +16,18 @@
     <!-- endbuild -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css">
   </head>
-  <body ng-app="multilineStringToJavascriptConverterApp" layout="row" layout-align="center center">
+  <body ng-app="multilineStringToJavascriptConverterApp" layout="column" layout-align="center center">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view=""
+    <div class="w-100" ng-view=""
          layout="row" layout-margin flex layout-wrap layout-align="space-around center"
       ></div>
 
-    <!--<footer>Thanks</footer>-->
-
+    <footer layout="row" layout-align="center center" layout-margin>
+      <iframe flex src="https://ghbtns.com/github-btn.html?user=madvas&repo=multiline-string-to-javascript-converter&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -35,7 +36,7 @@
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
        }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
+       ga('create', 'UA-21191392-6');
        ga('send', 'pageview');
     </script>
 
