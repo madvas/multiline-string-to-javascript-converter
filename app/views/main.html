@@ -1,0 +1,50 @@
+<div flex="40" class="md-whiteframe-z1">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">String</h2>
+    </div>
+  </md-toolbar>
+  <md-content class="md-padding">
+    <form name="inputForm">
+      <div layout="row" layout-align="space-around">
+        <md-input-container flex="50">
+          <label>Variable name</label>
+          <input name="variableName" ng-model="variableName" required/>
+
+          <div ng-messages="inputForm.variableName.$error">
+            <div ng-message="required">This is required</div>
+          </div>
+        </md-input-container>
+        <md-select flex="40" placeholder="Select method" ng-model="selectedMethod">
+          <md-option value="plusConcat">Concat with '+'</md-option>
+          <md-option value="arrayJoin">As array with join('')</md-option>
+          <md-option value="variableConcat">Variable concatination</md-option>
+          <md-option value="splitBackslash">Split with backslash</md-option>
+        </md-select>
+      </div>
+      <div flex layout="row" layout-align="space-around">
+        <md-radio-group ng-model="quoteType" layout="row">
+          <md-radio-button value="single">Single quotes</md-radio-button>
+          <md-radio-button value="double">Double quotes</md-radio-button>
+        </md-radio-group>
+      </div>
+      <md-input-container flex>
+        <label>Insert string here</label>
+        <textarea ng-model="inputString" columns="10" rows="15"></textarea>
+      </md-input-container>
+    </form>
+  </md-content>
+</div>
+<div flex="40" class="md-whiteframe-z1">
+  <md-toolbar class="md-accent">
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Javascript</h2>
+    </div>
+  </md-toolbar>
+  <md-content class="md-padding">
+    <md-input-container flex>
+      <textarea columns="10" rows="20">{{ transformInput(inputString, selectedMethod, variableName, quoteType) }}</textarea>
+    </md-input-container>
+  </md-content>
+</div>
+
